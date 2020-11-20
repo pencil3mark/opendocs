@@ -68,7 +68,7 @@ doc_201119_kali使用Fluxion钓鱼WiFi.md
    #注意查看防火墙规则，尤其设备有docker要注意。docker规则会影响nat，具体还没时间分析
    ```
 
-3. 配置iptables把wifi内网网段80和443的流量重定向到burp的8080口，当然也可以另外一台机器的burp。（to-port 8080改to ip:8080)
+3. 配置iptables把wifi内网网段80和443的流量重定向到burp的8080口，当然也可以另外一台机器的burp。
 
    ```
    这个也可以封装到脚本：
@@ -178,9 +178,6 @@ doc_201119_kali使用Fluxion钓鱼WiFi.md
    [root@archlinux ~]# adb push burp.cer   /sdcard
    burp.cer: 1 file pushed, 0 skipped. 2.0 MB/s (940 bytes in 0.000s)
    ```
-
    **明天去单位试试 adb启动证书安装的大招，看看是不是这个也被阉割**
 
-   **PS：**chromium 导入cert最靠谱一个，国外大佬：https://www.youtube.com/watch?v=rPz9uYmt_xo
-
-   
+   **PS：** chromium 导入cert最靠谱一个，国外大佬：https://www.youtube.com/watch?v=rPz9uYmt_xo
